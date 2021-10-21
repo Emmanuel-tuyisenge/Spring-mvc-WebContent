@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.manu.springdemo.mvc.validation.CourseCode;
+
 public class Customer {
 
 	private String firstName;
@@ -22,7 +24,7 @@ public class Customer {
 	@Pattern(regexp="^[a-zA-Z0-9]{5}", message="Only 5 chars/digits")
 	private String postalCode;
 	
-	//@CourseCode(value="TOPS", message="must start with TOPS")
+	@CourseCode(value="TOPS", message="must start with TOPS")
 	private String courseCode;
 
 	public String getFirstName() {
